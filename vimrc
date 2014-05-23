@@ -20,7 +20,7 @@ set tabstop=2      " Indents only two spaces
 set ai             " Auto indent
 set si             " Smart Indent
 
-"set textwidth=72   " Fixes the width to 72 characters wide
+set textwidth=72   " Fixes the width to 72 characters wide
 
 "-----------------------------------------------------------------------
 " UI Config
