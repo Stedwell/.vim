@@ -1,91 +1,93 @@
-"-----------------------------------------------------------------------
-" Syntax Highlighting
-"-----------------------------------------------------------------------
-syntax enable " enable syntax processing
+"----------------------------------------------------------------------
+" Tabs, Spaces, Usage, Brackets
+"----------------------------------------------------------------------
+set expandtab       " Replace Tab's with spaces
+set smarttab        " Helps align tabs
+set shiftwidth=2    " Indents only two spaces
+set tabstop=2       " Indents only two spaces
+set autoindent      " Auto indent
+set copyindent      " Smart Indent
+set textwidth=72    " Fixes the width to 72 characters wide
+set colorcolumn=72  " Puts a color column at 72 characters
 
-" Markdown
-au! BufNewFile,BufRead *.text  set filetype=markdown
-au BufNewFile,BufRead *.text  set ai formatoptions=tcroqn2 comments=n:&gt;
-au! BufNewFile,BufRead *.md  set filetype=markdown
-au BufNewFile,BufRead *.md  set ai formatoptions=tcroqn2 comments=n:&gt;
-
-
-"-----------------------------------------------------------------------
-" Spaces and Tabs
-"-----------------------------------------------------------------------
-set expandtab      " Replace Tab's with spaces
-set smarttab       " Helps align tabs
-set shiftwidth=2   " Indents only two spaces
-set tabstop=2      " Indents only two spaces
-set ai             " Auto indent
-set si             " Smart Indent
-
-set textwidth=72   " Fixes the width to 72 characters wide
-
-"-----------------------------------------------------------------------
-" UI Config
-"-----------------------------------------------------------------------
-set number         " numbers at the left hand side
-set showcmd        " show command in bottom bar
-set wildmenu       " graphical menu 
-set ruler
-set title
-
-"-----------------------------------------------------------------------
-" Movement
-"-----------------------------------------------------------------------
-set scrolloff=3    " Keeps 3 lines from top and bottom
- 
-"-----------------------------------------------------------------------
-" Search
-"-----------------------------------------------------------------------
 set incsearch       " search as characters are entered
-set hlsearch        " highlight matches" 
 set ignorecase      " not case sensitive
-set smartcase       " not case sensitive unless capitals are used
+set smartcase       " capitals cause case sensitivity
 nmap <silent> ,/ :nohlsearch<CR>
 
-"-----------------------------------------------------------------------
-" Launch Config
-"-----------------------------------------------------------------------
-call pathogen#incubate() " Use pathogen
-call pathogen#helptags() " Use pathogen
+set backspace=indent,eol,start
+set showmatch       " show matching parenthesis, move between brackets
+nnoremap <tab> %
+vnoremap <tab> %
 
-"-----------------------------------------------------------------------
-" Remapping Function Keys
-"-----------------------------------------------------------------------
-:map <F4> :setlocal spell! spelllang=en_us<CR>  
+"----------------------------------------------------------------------
+" UI Configuration
+"----------------------------------------------------------------------
+syntax enable 	          " enable syntax processing
+colorscheme mustang
 
-:set pastetoggle=<F2>                           " Toggle Paste
-:set showmode                                   " Display Paste Mode
+set number                " numbers at the left hand side
+set showcmd               " show command in bottom bar
+set wildmenu              " graphical menu
+set wildmode=list:longest " shows more for wildmenu
+set ruler                 "
+set title                 "
+set showmode              "
+set cursorline            " Places line under current line
+set ttyfast               " Speeds up how fast characters are drawn
 
-"-----------------------------------------------------------------------
-" Arduino Highlighting
-"-----------------------------------------------------------------------
-au BufRead,BufNewFile *.pde set filetype=arduino
-au BufRead,BufNewFile *.ino set filetype=arduino
+set scrolloff=3           " keeps cursor 3 lines from top or bottom
+set relativenumber        " displays how far away from current line
+"----------------------------------------------------------------------
+" Key remapping
+"----------------------------------------------------------------------
+:map <F4> :setlocal spell! spelllang=en_us<CR>
 
-"-----------------------------------------------------------------------
-" Key Rebinding 
-"-----------------------------------------------------------------------
-let mapleader = "\<Space>"
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>x :x<CR>
-nnoremap <Leader>q :q<CR>
+:set pastetoggle=<F2>
 
-nnoremap <F3> "=strftime("%Y-%m-%d %T")<CR>P
-inoremap <F3> <C-R>=strftime("%Y-%m-%d %T")<CR>
+let mapleader = "'"
 
-cabbrev W w
+inoremap jj <ESC>
 
-"-----------------------------------------------------------------------
-" vim-latex formatting
-"-----------------------------------------------------------------------
+nnoremap <F12> "=strftime("%Y-%m-%d %T")<CR>P
+inoremap <F12> <C-R>=strftime("%Y-%m-%d %T")<CR>
+
+nnoremap <F10> "=strftime("%Y-%m-%d")<CR>P
+inoremap <F10> <C-R>=strftime("%Y-%m-%d")<CR>
+
+nnoremap ; :
+
+"----------------------------------------------------------------------
+" Bundle Setting
+"----------------------------------------------------------------------
 let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats='pdf, aux'
+let g:Tex_MultipleCompileFormats = 'pdf, aux'
 
+"----------------------------------------------------------------------
+" Miscellaneous
+"----------------------------------------------------------------------
+set nocompatible
 
-"-----------------------------------------------------------------------
-" Change commonly misspelled words
-"-----------------------------------------------------------------------
-:abbr teh the
+call pathogen#incubate()  " use pathogen
+call pathogen#helptags()  " use pathogen
+
+:set spell
+
+set undofile  " Creates a .un file to track changes even after closing
+
+au FocusLost * :wa        " auto save if focus is lost
+
+" remove trailing whitespace at end of current line
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+"----------------------------------------------------------------------
+" Split windows
+"----------------------------------------------------------------------
+nnoremap <leader>w <C-w>s<C-w>l
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" EoF
