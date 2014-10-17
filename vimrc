@@ -8,7 +8,7 @@ set tabstop=2       " Indents only two spaces
 set autoindent      " Auto indent
 set copyindent      " Smart Indent
 set textwidth=72    " Fixes the width to 72 characters wide
-set colorcolumn=72  " Puts a color column at 72 characters
+set colorcolumn=73  " Puts a color column at 73 characters
 
 set incsearch       " search as characters are entered
 set ignorecase      " not case sensitive
@@ -38,6 +38,7 @@ set ttyfast               " Speeds up how fast characters are drawn
 
 set scrolloff=3           " keeps cursor 3 lines from top or bottom
 set relativenumber        " displays how far away from current line
+
 "----------------------------------------------------------------------
 " Key remapping
 "----------------------------------------------------------------------
@@ -56,6 +57,7 @@ nnoremap <F10> "=strftime("%Y-%m-%d")<CR>P
 inoremap <F10> <C-R>=strftime("%Y-%m-%d")<CR>
 
 nnoremap ; :
+
 
 "----------------------------------------------------------------------
 " Bundle Setting
