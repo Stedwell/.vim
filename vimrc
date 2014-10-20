@@ -1,4 +1,37 @@
 "----------------------------------------------------------------------
+" Vim configuration file
+"
+" author:         Bennett Stedwell
+" email:          bstedwell@gmail.com
+"
+" date created:   2014-10-17 12:29:49
+" date modified:  2014-10-20 13:30:14
+"
+" Sections:
+"   -> Tabs, Spaces, Usage, Brackets
+"   -> UI Configuration
+"   -> Key remapping and unmapping
+"   -> Bundle Setting
+"   -> Miscellaneous
+"   -> Split windows
+"
+" Plugins:
+"   -> delimitMate
+"   -> nerdcommenter
+"   -> nerdtree
+"   -> supertab
+"   -> vim-fugitive
+"   -> vim-latex-suite
+"   -> YouCompleteMe
+"
+" Auto loads:
+"   -> pathogen.vim
+"
+" Theme:
+"   -> mustang.vim
+"----------------------------------------------------------------------
+
+"----------------------------------------------------------------------
 " Tabs, Spaces, Usage, Brackets
 "----------------------------------------------------------------------
 set expandtab       " Replace Tab's with spaces
@@ -58,6 +91,10 @@ nnoremap <F10> "=strftime("%Y-%m-%d")<CR>P
 inoremap <F10> <C-R>=strftime("%Y-%m-%d")<CR>
 
 nnoremap ; :
+
+" moving to next, or previous, misspelled word
+map <leader>sn ]s
+map <leader>sp [s
 
 "----------------------------------------------------------------------
 " Bundle Setting
