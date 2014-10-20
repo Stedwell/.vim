@@ -19,3 +19,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git@github.com:ervandew/supertab.git
+[submodule "bundle/vim-latex-suite"]
+	path = bundle/vim-latex-suite
+	url = git@github.com:gerw/vim-latex-suite.git

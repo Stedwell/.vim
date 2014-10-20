@@ -4,6 +4,7 @@
 set expandtab       " Replace Tab's with spaces
 set smarttab        " Helps align tabs
 set shiftwidth=2    " Indents only two spaces
+set softtabstop=2   " Backspace a tab in one go
 set tabstop=2       " Indents only two spaces
 set autoindent      " Auto indent
 set copyindent      " Smart Indent
@@ -40,7 +41,7 @@ set scrolloff=3           " keeps cursor 3 lines from top or bottom
 set relativenumber        " displays how far away from current line
 
 "----------------------------------------------------------------------
-" Key remapping
+" Key remapping and unmapping
 "----------------------------------------------------------------------
 :map <F4> :setlocal spell! spelllang=en_us<CR>
 
@@ -48,7 +49,7 @@ set relativenumber        " displays how far away from current line
 
 let mapleader = "'"
 
-inoremap jj <ESC>
+inoremap jk <ESC>
 
 nnoremap <F12> "=strftime("%Y-%m-%d %T")<CR>P
 inoremap <F12> <C-R>=strftime("%Y-%m-%d %T")<CR>
@@ -57,7 +58,6 @@ nnoremap <F10> "=strftime("%Y-%m-%d")<CR>P
 inoremap <F10> <C-R>=strftime("%Y-%m-%d")<CR>
 
 nnoremap ; :
-
 
 "----------------------------------------------------------------------
 " Bundle Setting

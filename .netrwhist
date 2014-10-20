@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/bilbo/.vim/colors'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/bilbo/Documents/Google Drive/SPSU/Electric Machines'
+let g:netrw_dirhist_2='/home/bilbo/Documents/Google Drive/SPSU'
+let g:netrw_dirhist_3='/home/bilbo/Documents/Google Drive/SPSU/Insturments and Controls'
+let g:netrw_dirhist_4='/home/bilbo/Documents/Google Drive/SPSU/Insturments and Controls/Homework'
+let g:netrw_dirhist_5='/home/bilbo/Documents/Google Drive/SPSU/Insturments and Controls/Homework/Homework 6'
+let g:netrw_dirhist_6='/home/bilbo/Documents/Google Drive/SPSU/Insturments and Controls/Homework/Homework 6/Source'
