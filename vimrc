@@ -82,7 +82,7 @@ set relativenumber        " displays how far away from current line
 
 let mapleader = "'"
 
-inoremap jk <ESC>
+inoremap jj <ESC>
 
 nnoremap <F12> "=strftime("%Y-%m-%d %T")<CR>P
 inoremap <F12> <C-R>=strftime("%Y-%m-%d %T")<CR>
