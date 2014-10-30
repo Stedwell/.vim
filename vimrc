@@ -23,6 +23,7 @@
 "   -> vim-fugitive
 "   -> vim-latex-suite
 "   -> YouCompleteMe
+"   -> vim-arduino-ino
 "
 " Auto loads:
 "   -> pathogen.vim
@@ -101,6 +102,9 @@ map <leader>sp [s
 "----------------------------------------------------------------------
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf, aux'
+
+au BufRead,BufNewFile *.pde set filetype=arduino
+au BufRead,BufNewFile *.ino set filetype=arduino
 
 "----------------------------------------------------------------------
 " Miscellaneous

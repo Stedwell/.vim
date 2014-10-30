@@ -22,3 +22,6 @@
 [submodule "bundle/vim-latex-suite"]
 	path = bundle/vim-latex-suite
 	url = git@github.com:gerw/vim-latex-suite.git
+[submodule "bundle/vim-arduino-ino"]
+	path = bundle/vim-arduino-ino
+	url = git@github.com:jplaut/vim-arduino-ino.git
