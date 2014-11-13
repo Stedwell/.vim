@@ -5,7 +5,7 @@
 " email:          bstedwell@gmail.com
 "
 " date created:   2014-10-17 12:29:49
-" date modified:  2014-10-20 13:30:14
+" date modified:  2014-11-13 13:41:28
 "
 " Sections:
 "   -> Tabs, Spaces, Usage, Brackets
@@ -84,6 +84,8 @@ set relativenumber        " displays how far away from current line
 let mapleader = "'"
 
 inoremap jj <ESC>
+inoremap jk <ESC>
+inoremap kj <ESC>
 
 nnoremap <F12> "=strftime("%Y-%m-%d %T")<CR>P
 inoremap <F12> <C-R>=strftime("%Y-%m-%d %T")<CR>
@@ -116,7 +118,7 @@ call pathogen#helptags()  " use pathogen
 
 :set spell
 
-set undofile  " Creates a .un file to track changes even after closing
+" set undofile  " Creates a .un file to track changes even after closing
 
 au FocusLost * :wa        " auto save if focus is lost
 
