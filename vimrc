@@ -99,6 +99,13 @@ nnoremap ; :
 map <leader>sn ]s
 map <leader>sp [s
 
+" Move cursor to center of screen after search jump
+map G Gzz
+nnoremap n nzz
+nnoremap } }zz
+
+nnoremap Y y$
+
 "----------------------------------------------------------------------
 " Bundle Setting
 "----------------------------------------------------------------------
@@ -112,6 +119,9 @@ au BufRead,BufNewFile *.ino set filetype=arduino
 " Miscellaneous
 "----------------------------------------------------------------------
 set nocompatible
+set nobackup        " stop backup file, use git instead
+set nowritebackup   " stop backup file, use git instead
+set noswapfile      " stop backup file, use git instead
 
 call pathogen#incubate()  " use pathogen
 call pathogen#helptags()  " use pathogen
