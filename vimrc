@@ -129,11 +129,7 @@ call pathogen#helptags()  " use pathogen
 :set spell
 
 " set undofile  " Creates a .un file to track changes even after closing
-
 au FocusLost * :wa        " auto save if focus is lost
-
-" remove trailing whitespace at end of current line
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 "----------------------------------------------------------------------
 " Split windows
@@ -144,5 +140,13 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+"----------------------------------------------------------------------
+" New Commands
+"----------------------------------------------------------------------
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
 
 " EoF
