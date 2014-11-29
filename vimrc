@@ -5,7 +5,7 @@
 " email:          bstedwell@gmail.com
 "
 " date created:   2014-10-17 12:29:49
-" date modified:  2014-11-13 13:41:28
+" date modified:  2014-11-29 08:47:04
 "
 " Sections:
 "   -> Tabs, Spaces, Usage, Brackets
@@ -14,6 +14,8 @@
 "   -> Bundle Setting
 "   -> Miscellaneous
 "   -> Split windows
+"   -> New Commands
+"   -> Autostart Plugins
 "
 " Plugins:
 "   -> delimitMate
@@ -149,4 +151,9 @@ nnoremap <C-l> <C-w>l
 :command W w
 :command Q q
 
+"----------------------------------------------------------------------
+" Autostart Plugins
+"----------------------------------------------------------------------
+"autocmd VimEnter * NERDTree
+"autocmd BufEnter * NERDTreeMirror
 " EoF
